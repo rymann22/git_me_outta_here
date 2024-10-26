@@ -1,0 +1,8 @@
+This will cover connecting to repos 'n stuff
+
+View status - This isn't technically step 1, but it's never bad to do and will be done often
+  spiderman@computer$ git status
+
+The first step is to initialize a new "git repo" locally (make sure you're in the directory you want to be)
+  spiderman@computer$ git init
+  - This creates a .git folder in your current directory
