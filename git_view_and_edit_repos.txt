@@ -1,0 +1,65 @@
+This will cover connecting to repos 'n stuff
+
+View status - This isn't technically step 1, but it's never bad to do and will be done often
+  spiderman@computer$ git status
+
+Install gh
+- macos 
+  - brew install gh
+  - gh auth login
+  - below is what the process looks like
+    +-[ gh auth login ]---------------------------------------+
+    | [ spiderman | 33 ]$ gh auth login                       |
+    | ? Where do you use GitHub? GitHub.com                   |
+    | ? What is your preferred protocol for Git operations    |
+    |     on this host? HTTPS                                 |
+    | ? Authenticate Git with your GitHub credentials? Yes    |
+    | ? How would you like to authenticate GitHub CLI? Login  |
+    |     with a web browser                                  |
+    |                                                         |
+    | ! First copy your one-time code: AD3C-2B3J              |
+    | Press Enter to open https://github.com/login/device     |
+    |     in your browser...                                  |
+    | ✓ Authentication complete.                              |
+    | - gh config set -h github.com git_protocol https        |
+    | ✓ Configured git protocol                               |
+    | ✓ Logged in as spiderman                                |
+    +---------------------------------------------------------+
+
+View Repos
+- gh repos list
+- gh repos list username
+- curl "https://api.github.com/users/spiderman/repos" |grep "ssh_url"
+  - this is ugly and doesn't show hidden ones and I'd rather just not use it. there's a better way but I don't really want to mess with it
+
+Clone Repo
+- git clone https://github.com/spiderman/repository-name.git
+
+Editing Repo
+- cd repository-name
+- vi file or whatever you want
+
+View status of modified files
+- git status
+
+Stage files you want to commit "save"
+- this is kind of like "getting them ready" for the next "permanent" save which would be the commit. This allows you to edit stuff again and review anything you need to
+  - add all files
+    - git add .
+  - add one file
+    - git add file_name.txt
+
+Commit chanages "add comments"
+- permanent snapshot of changes. It's basically a new version everytime you commit changes
+  - git commit -m "updated file_name.txt with whatever"
+
+Push changes to github
+- this pushes everything to your actual github repo
+  - git push origin main
+    - note: main might not be the name of the branch, so double check it 
+
+Branches
+- edit specific parts of a project separate from the "main" branch
+
+spiderman@computer$ git init
+  - This creates a .git folder in your current directory
