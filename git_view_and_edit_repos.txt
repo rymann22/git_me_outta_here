@@ -34,6 +34,7 @@ View Repos
 
 Clone Repo
 - git clone https://github.com/spiderman/repository-name.git
+- gh repo clone rymann22/repo_Name
 
 Editing Repo
 - cd repository-name
