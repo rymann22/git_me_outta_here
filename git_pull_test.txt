@@ -1,1 +1,16 @@
 seeing if this works
+  962  git status
+  964  git status
+  965  git add .
+  966  git commit -m "testing something" 
+  967  git status
+  969  git push
+  970  git pull
+  971  git status
+  973  git branch
+  974  git push
+  975  git status
+  978  history |grep git
+  979  history |grep git |nl
+  980  history |grep git |tail -n 15>>git_pull_test.txt 
+  981  history |grep git |tail -n 15 >>git_pull_test.txt 
